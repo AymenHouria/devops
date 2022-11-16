@@ -32,7 +32,7 @@ pipeline {
 	  stage('Docker build image') {
       steps {
          sh 'echo "Docker build image is processing ...."'
-        sh 'docker build -t noamenn/achat .'
+        sh 'docker build -t noamenn/achat:1.0 .'
 
       }
     }
