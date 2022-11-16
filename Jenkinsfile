@@ -7,7 +7,7 @@ pipeline {
   
 
   stages {
-      /* 
+      
     stage ('Artifact construction') {
             steps {
                 sh 'echo "Artifact construction is processing ...."'
@@ -35,7 +35,7 @@ pipeline {
         sh 'docker build -t maryemcherif/achat:1.0 .'
 
       }
-    }*/
+    }
      stage('Docker login') {
       steps {
          sh 'echo "Docker login is processing ...."'
