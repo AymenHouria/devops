@@ -32,21 +32,21 @@ pipeline {
 	  stage('Docker build image') {
       steps {
          sh 'echo "Docker build image is processing ...."'
-        sh 'docker build -t noamenn/achat:1.0 .'
+        sh 'docker build -t maryemcherif/achat:1.0 .'
 
       }
     }
      stage('Docker login') {
       steps {
          sh 'echo "Docker login is processing ...."'
-	      sh 'docker login --username noamenn --password ${DOCKERHUBPASSWD}'
+	      sh 'docker login --username maryemcherif--password ${DOCKERHUBPASSWD}'
 
       }
     }
     stage('Docker push') {
       steps {
          sh 'echo "Docker push is processing ...."'
-        sh 'docker push noamenn/achat:1.0'
+        sh 'docker push maryemcherif/achat:latest'
 
       }
     }
