@@ -20,7 +20,7 @@ pipeline {
     stage("SonarQube ") {
             steps {
               withSonarQubeEnv('SonarQube') {
-                sh 'mvn clean -DskipTests package sonar:sonar'
+                sh 'mvn sonar:sonar -Dsonar.projectKey=maryem -Dsonar.host.url=http://192.168.56.2:9000 -Dsonar.login=maryem'
               }
             }
           }
