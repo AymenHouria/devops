@@ -16,7 +16,7 @@ pipeline {
             
         }
 
-     
+     /*
     stage("SonarQube ") {
             steps {
               withSonarQubeEnv('SonarQube') {
@@ -35,11 +35,11 @@ pipeline {
         sh 'docker build -t maryemcherif/achat:1.0 .'
 
       }
-    }
+    }*/
      stage('Docker login') {
       steps {
          sh 'echo "Docker login is processing ...."'
-	      sh 'docker login --username maryemcherif--password ${DOCKERHUBPASSWD}'
+	      sh 'docker login --username maryemcherif --password ${DOCKERHUBPASSWD}'
 
       }
     }
