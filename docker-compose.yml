@@ -19,7 +19,7 @@ services:
       # Where our data will be persisted
 
   spring-back:
-    image: hibafh/achat:7
+    image: noamenn/achat:latest
     container_name: achat-back
     ports:
       - 8089:8089
