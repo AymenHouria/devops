@@ -46,7 +46,7 @@ pipeline {
     stage('Docker push') {
       steps {
          sh 'echo "Docker push is processing ...."'
-        sh 'docker push noamenn/achat:latest'
+        sh 'docker push noamenn/achat:1.0'
 
       }
     }
