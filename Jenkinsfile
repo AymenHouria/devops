@@ -50,5 +50,10 @@ pipeline {
 
       }
     }
+	stage('Running Back') {
+      		steps {
+         		sh 'docker-compose up -d'
+      }
+    }
   }
 }
