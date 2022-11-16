@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mysql_db_1:
+    image: mysql:5.7
+    restart: always
+    container_name: mysql_db_1
+    environment:
+      MYSQL_DATABASE: achatdb
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - 3306:3306
+    expose:
+      # Opens port 3306 on the container
+      - 3306
+      # Where our data will be persisted
+
+  spring-back:
+    image: hibafh/achat:7
+    container_name: achat-back
+    ports:
+      - 8089:8089
+    depends_on:
+      - mysql_db_1
+    expose:
+      # Opens port 3306 on the container
+      - 8089
