@@ -25,8 +25,8 @@ pipeline {
             }
           }
     stage("NEXUS") {
-			steps {
-						sh 'mvn clean deploy -DskipTests'
+	steps {
+	sh 'mvn clean deploy -DskipTests'
       }
     }
 	  stage('Docker build image') {
