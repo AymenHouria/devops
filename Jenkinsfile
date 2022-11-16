@@ -5,9 +5,9 @@ pipeline {
      maven 'M2_HOME'    
   }
   
-/*
+
   stages {
-       
+      /* 
     stage ('Artifact construction') {
             steps {
                 sh 'echo "Artifact construction is processing ...."'
