@@ -16,7 +16,7 @@ pipeline {
             
         }
 
-     
+     /*
     stage("SonarQube ") {
             steps {
               withSonarQubeEnv('SonarQube') {
@@ -28,7 +28,7 @@ pipeline {
 			steps {
 						sh 'mvn clean deploy -DskipTests'
       }
-    }
+    }*/
 	  stage('Docker build image') {
       steps {
          sh 'echo "Docker build image is processing ...."'
