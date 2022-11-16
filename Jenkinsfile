@@ -5,7 +5,7 @@ pipeline {
      maven 'M2_HOME'    
   }
   
-
+/*
   stages {
        
     stage ('Artifact construction') {
@@ -16,7 +16,7 @@ pipeline {
             
         }
 
-     /*
+     
     stage("SonarQube ") {
             steps {
               withSonarQubeEnv('SonarQube') {
